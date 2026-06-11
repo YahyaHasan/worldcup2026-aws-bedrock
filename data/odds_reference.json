@@ -1,0 +1,866 @@
+[
+  {
+    "match_id": "M001",
+    "teams": [
+      "MEX",
+      "RSA"
+    ],
+    "favorite": "MEX",
+    "moneyline_american": -235,
+    "implied_win_prob": 0.701,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M002",
+    "teams": [
+      "KOR",
+      "CZE"
+    ],
+    "favorite": "KOR",
+    "moneyline_american": 170,
+    "implied_win_prob": 0.37,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M003",
+    "teams": [
+      "CAN",
+      "BIH"
+    ],
+    "favorite": "CAN",
+    "moneyline_american": -125,
+    "implied_win_prob": 0.556,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M004",
+    "teams": [
+      "USA",
+      "PAR"
+    ],
+    "favorite": "USA",
+    "moneyline_american": -105,
+    "implied_win_prob": 0.512,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M005",
+    "teams": [
+      "QAT",
+      "SUI"
+    ],
+    "favorite": "SUI",
+    "moneyline_american": -425,
+    "implied_win_prob": 0.81,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M006",
+    "teams": [
+      "BRA",
+      "MAR"
+    ],
+    "favorite": "BRA",
+    "moneyline_american": -145,
+    "implied_win_prob": 0.592,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M007",
+    "teams": [
+      "HAI",
+      "SCO"
+    ],
+    "favorite": "SCO",
+    "moneyline_american": -180,
+    "implied_win_prob": 0.643,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M008",
+    "teams": [
+      "AUS",
+      "TUR"
+    ],
+    "favorite": "TUR",
+    "moneyline_american": -145,
+    "implied_win_prob": 0.592,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M009",
+    "teams": [
+      "GER",
+      "CUW"
+    ],
+    "favorite": "GER",
+    "moneyline_american": -3500,
+    "implied_win_prob": 0.972,
+    "over_under": 4.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M010",
+    "teams": [
+      "NED",
+      "JPN"
+    ],
+    "favorite": "NED",
+    "moneyline_american": 100,
+    "implied_win_prob": 0.5,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M011",
+    "teams": [
+      "CIV",
+      "ECU"
+    ],
+    "favorite": "ECU",
+    "moneyline_american": 145,
+    "implied_win_prob": 0.408,
+    "over_under": 1.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M012",
+    "teams": [
+      "SWE",
+      "TUN"
+    ],
+    "favorite": "SWE",
+    "moneyline_american": -110,
+    "implied_win_prob": 0.524,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M013",
+    "teams": [
+      "ESP",
+      "CPV"
+    ],
+    "favorite": "ESP",
+    "moneyline_american": -1200,
+    "implied_win_prob": 0.923,
+    "over_under": 3.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M014",
+    "teams": [
+      "BEL",
+      "EGY"
+    ],
+    "favorite": "BEL",
+    "moneyline_american": -155,
+    "implied_win_prob": 0.608,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M015",
+    "teams": [
+      "KSA",
+      "URU"
+    ],
+    "favorite": "URU",
+    "moneyline_american": -230,
+    "implied_win_prob": 0.697,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M016",
+    "teams": [
+      "IRN",
+      "NZL"
+    ],
+    "favorite": "IRN",
+    "moneyline_american": -120,
+    "implied_win_prob": 0.545,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M017",
+    "teams": [
+      "FRA",
+      "SEN"
+    ],
+    "favorite": "FRA",
+    "moneyline_american": -210,
+    "implied_win_prob": 0.677,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M018",
+    "teams": [
+      "IRQ",
+      "NOR"
+    ],
+    "favorite": "NOR",
+    "moneyline_american": -475,
+    "implied_win_prob": 0.826,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M019",
+    "teams": [
+      "ARG",
+      "ALG"
+    ],
+    "favorite": "ARG",
+    "moneyline_american": -245,
+    "implied_win_prob": 0.71,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M020",
+    "teams": [
+      "AUT",
+      "JOR"
+    ],
+    "favorite": "AUT",
+    "moneyline_american": -310,
+    "implied_win_prob": 0.756,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M021",
+    "teams": [
+      "POR",
+      "COD"
+    ],
+    "favorite": "POR",
+    "moneyline_american": -360,
+    "implied_win_prob": 0.783,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M022",
+    "teams": [
+      "ENG",
+      "CRO"
+    ],
+    "favorite": "ENG",
+    "moneyline_american": -140,
+    "implied_win_prob": 0.583,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M023",
+    "teams": [
+      "GHA",
+      "PAN"
+    ],
+    "favorite": "GHA",
+    "moneyline_american": 110,
+    "implied_win_prob": 0.476,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M024",
+    "teams": [
+      "UZB",
+      "COL"
+    ],
+    "favorite": "COL",
+    "moneyline_american": -250,
+    "implied_win_prob": 0.714,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M025",
+    "teams": [
+      "CZE",
+      "RSA"
+    ],
+    "favorite": "CZE",
+    "moneyline_american": -105,
+    "implied_win_prob": 0.512,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M026",
+    "teams": [
+      "SUI",
+      "BIH"
+    ],
+    "favorite": "SUI",
+    "moneyline_american": -160,
+    "implied_win_prob": 0.615,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M027",
+    "teams": [
+      "CAN",
+      "QAT"
+    ],
+    "favorite": "CAN",
+    "moneyline_american": -320,
+    "implied_win_prob": 0.762,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M028",
+    "teams": [
+      "MEX",
+      "KOR"
+    ],
+    "favorite": "MEX",
+    "moneyline_american": -125,
+    "implied_win_prob": 0.556,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M029",
+    "teams": [
+      "USA",
+      "AUS"
+    ],
+    "favorite": "USA",
+    "moneyline_american": -130,
+    "implied_win_prob": 0.565,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M030",
+    "teams": [
+      "SCO",
+      "MAR"
+    ],
+    "favorite": "MAR",
+    "moneyline_american": 100,
+    "implied_win_prob": 0.5,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M031",
+    "teams": [
+      "BRA",
+      "HAI"
+    ],
+    "favorite": "BRA",
+    "moneyline_american": -1200,
+    "implied_win_prob": 0.923,
+    "over_under": 3.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M032",
+    "teams": [
+      "TUR",
+      "PAR"
+    ],
+    "favorite": "TUR",
+    "moneyline_american": 125,
+    "implied_win_prob": 0.444,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M033",
+    "teams": [
+      "NED",
+      "SWE"
+    ],
+    "favorite": "NED",
+    "moneyline_american": -155,
+    "implied_win_prob": 0.608,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M034",
+    "teams": [
+      "GER",
+      "CIV"
+    ],
+    "favorite": "GER",
+    "moneyline_american": -180,
+    "implied_win_prob": 0.643,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M035",
+    "teams": [
+      "ECU",
+      "CUW"
+    ],
+    "favorite": "ECU",
+    "moneyline_american": -500,
+    "implied_win_prob": 0.833,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M036",
+    "teams": [
+      "TUN",
+      "JPN"
+    ],
+    "favorite": "JPN",
+    "moneyline_american": -140,
+    "implied_win_prob": 0.583,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M037",
+    "teams": [
+      "ESP",
+      "KSA"
+    ],
+    "favorite": "ESP",
+    "moneyline_american": -1000,
+    "implied_win_prob": 0.909,
+    "over_under": 3.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M038",
+    "teams": [
+      "BEL",
+      "IRN"
+    ],
+    "favorite": "BEL",
+    "moneyline_american": -245,
+    "implied_win_prob": 0.71,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M039",
+    "teams": [
+      "URU",
+      "CPV"
+    ],
+    "favorite": "URU",
+    "moneyline_american": -225,
+    "implied_win_prob": 0.692,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M040",
+    "teams": [
+      "NZL",
+      "EGY"
+    ],
+    "favorite": "EGY",
+    "moneyline_american": -130,
+    "implied_win_prob": 0.565,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M041",
+    "teams": [
+      "ARG",
+      "AUT"
+    ],
+    "favorite": "ARG",
+    "moneyline_american": -155,
+    "implied_win_prob": 0.608,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M042",
+    "teams": [
+      "FRA",
+      "IRQ"
+    ],
+    "favorite": "FRA",
+    "moneyline_american": -800,
+    "implied_win_prob": 0.889,
+    "over_under": 3.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M043",
+    "teams": [
+      "NOR",
+      "SEN"
+    ],
+    "favorite": "NOR",
+    "moneyline_american": 115,
+    "implied_win_prob": 0.465,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M044",
+    "teams": [
+      "JOR",
+      "ALG"
+    ],
+    "favorite": "ALG",
+    "moneyline_american": -190,
+    "implied_win_prob": 0.655,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M045",
+    "teams": [
+      "POR",
+      "UZB"
+    ],
+    "favorite": "POR",
+    "moneyline_american": -425,
+    "implied_win_prob": 0.81,
+    "over_under": 3.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M046",
+    "teams": [
+      "ENG",
+      "GHA"
+    ],
+    "favorite": "ENG",
+    "moneyline_american": -320,
+    "implied_win_prob": 0.762,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M047",
+    "teams": [
+      "PAN",
+      "CRO"
+    ],
+    "favorite": "CRO",
+    "moneyline_american": -180,
+    "implied_win_prob": 0.643,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M048",
+    "teams": [
+      "COL",
+      "COD"
+    ],
+    "favorite": "COL",
+    "moneyline_american": -220,
+    "implied_win_prob": 0.688,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M049",
+    "teams": [
+      "BIH",
+      "QAT"
+    ],
+    "favorite": "BIH",
+    "moneyline_american": -160,
+    "implied_win_prob": 0.615,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M050",
+    "teams": [
+      "SUI",
+      "CAN"
+    ],
+    "favorite": "SUI",
+    "moneyline_american": 115,
+    "implied_win_prob": 0.465,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M051",
+    "teams": [
+      "MAR",
+      "HAI"
+    ],
+    "favorite": "MAR",
+    "moneyline_american": -285,
+    "implied_win_prob": 0.74,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M052",
+    "teams": [
+      "SCO",
+      "BRA"
+    ],
+    "favorite": "BRA",
+    "moneyline_american": -215,
+    "implied_win_prob": 0.683,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M053",
+    "teams": [
+      "CZE",
+      "MEX"
+    ],
+    "favorite": "MEX",
+    "moneyline_american": -125,
+    "implied_win_prob": 0.556,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M054",
+    "teams": [
+      "RSA",
+      "KOR"
+    ],
+    "favorite": "KOR",
+    "moneyline_american": -105,
+    "implied_win_prob": 0.512,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M055",
+    "teams": [
+      "CUW",
+      "CIV"
+    ],
+    "favorite": "CIV",
+    "moneyline_american": -450,
+    "implied_win_prob": 0.818,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M056",
+    "teams": [
+      "ECU",
+      "GER"
+    ],
+    "favorite": "GER",
+    "moneyline_american": -135,
+    "implied_win_prob": 0.574,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M057",
+    "teams": [
+      "JPN",
+      "SWE"
+    ],
+    "favorite": "JPN",
+    "moneyline_american": 110,
+    "implied_win_prob": 0.476,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M058",
+    "teams": [
+      "TUN",
+      "NED"
+    ],
+    "favorite": "NED",
+    "moneyline_american": -200,
+    "implied_win_prob": 0.667,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M059",
+    "teams": [
+      "PAR",
+      "AUS"
+    ],
+    "favorite": "PAR",
+    "moneyline_american": 115,
+    "implied_win_prob": 0.465,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M060",
+    "teams": [
+      "TUR",
+      "USA"
+    ],
+    "favorite": "USA",
+    "moneyline_american": 155,
+    "implied_win_prob": 0.392,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M061",
+    "teams": [
+      "NOR",
+      "FRA"
+    ],
+    "favorite": "FRA",
+    "moneyline_american": -115,
+    "implied_win_prob": 0.535,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M062",
+    "teams": [
+      "SEN",
+      "IRQ"
+    ],
+    "favorite": "SEN",
+    "moneyline_american": -235,
+    "implied_win_prob": 0.701,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M063",
+    "teams": [
+      "CPV",
+      "KSA"
+    ],
+    "favorite": "CPV",
+    "moneyline_american": 160,
+    "implied_win_prob": 0.385,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M064",
+    "teams": [
+      "URU",
+      "ESP"
+    ],
+    "favorite": "ESP",
+    "moneyline_american": -155,
+    "implied_win_prob": 0.608,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M065",
+    "teams": [
+      "EGY",
+      "IRN"
+    ],
+    "favorite": "EGY",
+    "moneyline_american": 130,
+    "implied_win_prob": 0.435,
+    "over_under": 1.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M066",
+    "teams": [
+      "NZL",
+      "BEL"
+    ],
+    "favorite": "BEL",
+    "moneyline_american": -340,
+    "implied_win_prob": 0.773,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M067",
+    "teams": [
+      "CRO",
+      "GHA"
+    ],
+    "favorite": "CRO",
+    "moneyline_american": -150,
+    "implied_win_prob": 0.6,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M068",
+    "teams": [
+      "PAN",
+      "ENG"
+    ],
+    "favorite": "ENG",
+    "moneyline_american": -340,
+    "implied_win_prob": 0.773,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M069",
+    "teams": [
+      "COL",
+      "POR"
+    ],
+    "favorite": "POR",
+    "moneyline_american": 120,
+    "implied_win_prob": 0.455,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M070",
+    "teams": [
+      "COD",
+      "UZB"
+    ],
+    "favorite": "COD",
+    "moneyline_american": 135,
+    "implied_win_prob": 0.426,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M071",
+    "teams": [
+      "ALG",
+      "AUT"
+    ],
+    "favorite": "AUT",
+    "moneyline_american": 125,
+    "implied_win_prob": 0.444,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  },
+  {
+    "match_id": "M072",
+    "teams": [
+      "JOR",
+      "ARG"
+    ],
+    "favorite": "ARG",
+    "moneyline_american": -525,
+    "implied_win_prob": 0.84,
+    "over_under": 2.5,
+    "note": "includes bookmaker vig; calibration only, never loaded to DynamoDB"
+  }
+]
