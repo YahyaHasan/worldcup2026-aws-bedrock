@@ -1,0 +1,24 @@
+# Secrets — never commit credentials of any kind
+.env
+.env.*
+*.pem
+samconfig.toml
+
+# AWS SAM build artifacts
+.aws-sam/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node / frontend
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# OS / editor noise
+.DS_Store
+.idea/
+.vscode/
