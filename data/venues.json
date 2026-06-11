@@ -1,0 +1,18 @@
+{
+  "MetLife Stadium": {"city": "East Rutherford, New Jersey", "country": "USA", "altitude_ft": 7, "environment": "humid, sea level, high travel hub"},
+  "AT&T Stadium": {"city": "Arlington, Texas", "country": "USA", "altitude_ft": 610, "environment": "indoor climate controlled, dry air"},
+  "SoFi Stadium": {"city": "Inglewood, California", "country": "USA", "altitude_ft": 140, "environment": "stable coastal climate, roofed open sides"},
+  "Mercedes-Benz Stadium": {"city": "Atlanta, Georgia", "country": "USA", "altitude_ft": 1050, "environment": "fully climate controlled dome"},
+  "Hard Rock Stadium": {"city": "Miami Gardens, Florida", "country": "USA", "altitude_ft": 10, "environment": "extreme heat and humidity"},
+  "Gillette Stadium": {"city": "Foxborough, Massachusetts", "country": "USA", "altitude_ft": 280, "environment": "humid summer, suburban travel"},
+  "Levi's Stadium": {"city": "Santa Clara, California", "country": "USA", "altitude_ft": 40, "environment": "sun exposure, coastal cooling at night"},
+  "Lumen Field": {"city": "Seattle, Washington", "country": "USA", "altitude_ft": 20, "environment": "mild, loud stadium acoustics"},
+  "NRG Stadium": {"city": "Houston, Texas", "country": "USA", "altitude_ft": 50, "environment": "fully indoor, extreme outdoor humidity"},
+  "Lincoln Financial Field": {"city": "Philadelphia, Pennsylvania", "country": "USA", "altitude_ft": 10, "environment": "balanced East Coast summer conditions"},
+  "Arrowhead Stadium": {"city": "Kansas City, Missouri", "country": "USA", "altitude_ft": 900, "environment": "hot summers, wind exposure"},
+  "Estadio Azteca": {"city": "Mexico City", "country": "Mexico", "altitude_ft": 7350, "environment": "extreme altitude, oxygen depletion"},
+  "Estadio Akron": {"city": "Guadalajara", "country": "Mexico", "altitude_ft": 5120, "environment": "high altitude, moderate heat"},
+  "Estadio BBVA": {"city": "Monterrey", "country": "Mexico", "altitude_ft": 1770, "environment": "hot, enclosed heat retention"},
+  "BC Place": {"city": "Vancouver", "country": "Canada", "altitude_ft": 10, "environment": "retractable roof, stable climate"},
+  "BMO Field": {"city": "Toronto", "country": "Canada", "altitude_ft": 250, "environment": "lake humidity, smaller stadium"}
+}
