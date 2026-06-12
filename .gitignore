@@ -11,7 +11,7 @@ samconfig.toml
 __pycache__/
 *.pyc
 .venv/
-venv/
+myvenv/
 
 # Node / frontend
 node_modules/
@@ -22,5 +22,4 @@ frontend/.vite/
 .DS_Store
 .idea/
 .vscode/
-.DS_Store
 .DS_Store
