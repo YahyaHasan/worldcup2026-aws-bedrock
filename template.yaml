@@ -1,0 +1,60 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: World Cup 2026 Tournament Companion Agent — infrastructure
+
+Resources:
+
+  TeamsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: Teams
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: team_id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: team_id
+          KeyType: HASH
+
+  MatchesTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: Matches
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: match_id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: match_id
+          KeyType: HASH
+
+  GroupStandingsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: GroupStandings
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: group_id
+          AttributeType: S
+        - AttributeName: team_id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: group_id
+          KeyType: HASH
+        - AttributeName: team_id
+          KeyType: RANGE
+
+  SessionMemoryTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: SessionMemory
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: session_id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: session_id
+          KeyType: HASH
+      TimeToLiveSpecification:
+        AttributeName: expires_at
+        Enabled: true
