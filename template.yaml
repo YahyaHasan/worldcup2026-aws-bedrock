@@ -16,6 +16,18 @@ Resources:
       FunctionName: simulate-match
       CodeUri: src/tools/simulate_match/
       Handler: app.lambda_handler
+  
+  ScheduleStandingsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: schedule-standings
+      CodeUri: src/tools/schedule_standings/
+      Handler: app.lambda_handler
+      Policies:
+        - DynamoDBReadPolicy:
+            TableName: !Ref MatchesTable
+        - DynamoDBReadPolicy:
+            TableName: !Ref GroupStandingsTable
 
   TeamsTable:
     Type: AWS::DynamoDB::Table
