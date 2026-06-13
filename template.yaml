@@ -2,7 +2,20 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: World Cup 2026 Tournament Companion Agent — infrastructure
 
+Globals:
+  Function:
+    Timeout: 30
+    MemorySize: 256
+    Runtime: python3.12
+
 Resources:
+
+  SimulateMatchFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: simulate-match
+      CodeUri: src/tools/simulate_match/
+      Handler: app.lambda_handler
 
   TeamsTable:
     Type: AWS::DynamoDB::Table

@@ -23,3 +23,7 @@ frontend/.vite/
 .idea/
 .vscode/
 .DS_Store
+
+# Other
+response.json
+r.json
