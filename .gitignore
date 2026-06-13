@@ -24,7 +24,8 @@ frontend/.vite/
 .vscode/
 .DS_Store
 
-# Other
+# json output
 response.json
 resp.json
 r.json
+out.json

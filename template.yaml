@@ -28,6 +28,17 @@ Resources:
             TableName: !Ref MatchesTable
         - DynamoDBReadPolicy:
             TableName: !Ref GroupStandingsTable
+  
+  NewsSearchFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: news-search
+      CodeUri: src/tools/news_search/
+      Handler: app.lambda_handler
+      Timeout: 30
+      Policies:
+        - SSMParameterReadPolicy:
+            ParameterName: worldcup2026/tavily-api-key
 
   TeamsTable:
     Type: AWS::DynamoDB::Table
