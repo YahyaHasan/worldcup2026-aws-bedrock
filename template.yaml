@@ -39,6 +39,16 @@ Resources:
       Policies:
         - SSMParameterReadPolicy:
             ParameterName: worldcup2026/tavily-api-key
+  
+  MemoryFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: memory
+      CodeUri: src/tools/memory/
+      Handler: app.lambda_handler
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref SessionMemoryTable
 
   TeamsTable:
     Type: AWS::DynamoDB::Table
