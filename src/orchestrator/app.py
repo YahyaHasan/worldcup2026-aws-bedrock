@@ -2,10 +2,15 @@ import json
 import boto3
 import os
 import re
+import logging
+import time
 
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
 
 GUARDRAIL_ID = os.environ.get("GUARDRAIL_ID")
 GUARDRAIL_VERSION = os.environ.get("GUARDRAIL_VERSION")
+
 bedrock = boto3.client("bedrock-runtime")
 lambda_client = boto3.client("lambda")
 
@@ -79,6 +84,7 @@ def run_agent(user_message, session_id):
     # Conversation starts with the user's message.
     messages = [{"role": "user", "content": [{"text": user_message}]}]
     trace = []  # records tool calls for observability
+    request_start = time.time()
 
     for _ in range(MAX_ITERATIONS):
         converse_args = {
@@ -104,7 +110,16 @@ def run_agent(user_message, session_id):
             final_text = "".join(
                 block["text"] for block in output_message["content"] if "text" in block
             )
-            return {"answer": clean_answer(final_text), "trace": trace}
+            answer = clean_answer(final_text)
+            logger.info(json.dumps({
+                "event": "agent_request_complete",
+                "session_id": session_id,
+                "user_message": user_message,
+                "tools_used": [t["tool"] for t in trace],
+                "trace": trace,
+                "total_latency_ms": int((time.time() - request_start) * 1000),
+            }))
+            return {"answer": answer, "trace": trace}
 
         # Otherwise, handle every tool the model requested this turn.
         tool_results = []
@@ -115,8 +130,15 @@ def run_agent(user_message, session_id):
             tool_name = tool_use["name"]
             tool_input = tool_use["input"]
 
+            tool_start = time.time()
             result = invoke_tool(tool_name, tool_input, session_id)
-            trace.append({"tool": tool_name, "input": tool_input, "output": result})
+            tool_latency_ms = int((time.time() - tool_start) * 1000)
+            trace.append({
+                "tool": tool_name,
+                "input": tool_input,
+                "output": result,
+                "latency_ms": tool_latency_ms,
+            })
 
             tool_results.append({
                 "toolResult": {
@@ -129,6 +151,13 @@ def run_agent(user_message, session_id):
         messages.append({"role": "user", "content": tool_results})
 
     # Safety: ran out of iterations without a final answer.
+    logger.warning(json.dumps({
+        "event": "agent_request_incomplete",
+        "session_id": session_id,
+        "user_message": user_message,
+        "tools_used": [t["tool"] for t in trace],
+        "total_latency_ms": int((time.time() - request_start) * 1000),
+    }))
     return {"answer": "I wasn't able to complete that request.", "trace": trace}
 
 def lambda_handler(event, context):
