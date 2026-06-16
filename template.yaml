@@ -49,6 +49,30 @@ Resources:
       Policies:
         - DynamoDBCrudPolicy:
             TableName: !Ref SessionMemoryTable
+  
+  OrchestratorFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: orchestrator
+      CodeUri: src/orchestrator/
+      Handler: app.lambda_handler
+      Timeout: 60
+      Policies:
+        - LambdaInvokePolicy:
+            FunctionName: !Ref SimulateMatchFunction
+        - LambdaInvokePolicy:
+            FunctionName: !Ref ScheduleStandingsFunction
+        - LambdaInvokePolicy:
+            FunctionName: !Ref NewsSearchFunction
+        - LambdaInvokePolicy:
+            FunctionName: !Ref MemoryFunction
+        - Statement:
+            - Effect: Allow
+              Action:
+                - bedrock:InvokeModel
+              Resource:
+                - "arn:aws:bedrock:*::foundation-model/amazon.nova-lite-v1:0"
+                - "arn:aws:bedrock:us-east-1:*:inference-profile/us.amazon.nova-lite-v1:0"
 
   TeamsTable:
     Type: AWS::DynamoDB::Table
