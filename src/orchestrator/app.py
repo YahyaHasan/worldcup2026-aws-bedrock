@@ -1,6 +1,11 @@
 import json
 import boto3
+import os
+import re
 
+
+GUARDRAIL_ID = os.environ.get("GUARDRAIL_ID")
+GUARDRAIL_VERSION = os.environ.get("GUARDRAIL_VERSION")
 bedrock = boto3.client("bedrock-runtime")
 lambda_client = boto3.client("lambda")
 
@@ -25,12 +30,20 @@ SYSTEM_PROMPT = [{
         "Tool usage:\n"
         "- Use simulate_match for predictions and win probabilities.\n"
         "- Use get_schedule_and_standings for factual schedule, results, and standings.\n"
-        "- Use search_team_news for current real-world news (injuries, form, lineups).\n"
-        "- Use manage_memory to retrieve user preferences at the start and save new ones.\n\n"
-        "Be transparent about limitations: when you cite a prediction, mention it comes from "
-        "a statistical model that does not account for injuries or current form unless you "
-        "also checked the news. When you cite news, mention your sources. Never frame "
-        "predictions as betting advice — present probabilities as informational only."
+        "- Use search_team_news ONLY when the user explicitly asks about news, injuries, "
+        "form, lineups, or a team's current real-world situation. Do NOT call it for a "
+        "plain prediction question.\n"
+        "- Use manage_memory to retrieve preferences at the start and save new ones.\n\n"
+        "Answering rules:\n"
+        "- When you run simulate_match, you MUST state the actual numbers in your answer: "
+        "each team's win probability and the most likely score. Do not run a prediction and "
+        "then omit the result.\n"
+        "- Only fetch what the question needs. A 'who would win' question needs simulate_match "
+        "alone, not news.\n"
+        "- Be transparent: when citing a prediction, note it comes from a statistical model "
+        "that does not account for injuries or form. When citing news, mention sources.\n"
+        "- Never output internal reasoning, planning notes, or <thinking> tags. Reply only "
+        "with the final answer the user should see."
     )
 }]
 
@@ -51,6 +64,14 @@ def invoke_tool(tool_name, tool_input, session_id):
     result = json.loads(response["Payload"].read().decode("utf-8"))
     return result
 
+def clean_answer(text):
+    """Remove any leaked internal-reasoning tags before returning to the user."""
+    # Strip <thinking>...</thinking> blocks (including multiline).
+    text = re.sub(r"<thinking>.*?</thinking>", "", text, flags=re.DOTALL)
+    # Strip any stray orphan tags just in case.
+    text = re.sub(r"</?thinking>", "", text)
+    return text.strip()
+
 def run_agent(user_message, session_id):
     """The agentic loop: call Nova, dispatch any tool requests, feed results back,
     repeat until Nova returns a final text answer (or we hit the iteration cap)."""
@@ -60,12 +81,18 @@ def run_agent(user_message, session_id):
     trace = []  # records tool calls for observability
 
     for _ in range(MAX_ITERATIONS):
-        response = bedrock.converse(
-            modelId=MODEL_ID,
-            system=SYSTEM_PROMPT,
-            messages=messages,
-            toolConfig=TOOL_CONFIG,
-        )
+        converse_args = {
+            "modelId": MODEL_ID,
+            "system": SYSTEM_PROMPT,
+            "messages": messages,
+            "toolConfig": TOOL_CONFIG,
+        }
+        if GUARDRAIL_ID and GUARDRAIL_VERSION:
+            converse_args["guardrailConfig"] = {
+                "guardrailIdentifier": GUARDRAIL_ID,
+                "guardrailVersion": GUARDRAIL_VERSION,
+            }
+        response = bedrock.converse(**converse_args)
 
         output_message = response["output"]["message"]
         messages.append(output_message)  # add the model's turn to the conversation
@@ -77,7 +104,7 @@ def run_agent(user_message, session_id):
             final_text = "".join(
                 block["text"] for block in output_message["content"] if "text" in block
             )
-            return {"answer": final_text, "trace": trace}
+            return {"answer": clean_answer(final_text), "trace": trace}
 
         # Otherwise, handle every tool the model requested this turn.
         tool_results = []

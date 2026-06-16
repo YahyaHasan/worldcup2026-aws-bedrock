@@ -57,6 +57,10 @@ Resources:
       CodeUri: src/orchestrator/
       Handler: app.lambda_handler
       Timeout: 60
+      Environment:
+        Variables:
+          GUARDRAIL_ID: na24m8dv4qnj
+          GUARDRAIL_VERSION: "6"
       Policies:
         - LambdaInvokePolicy:
             FunctionName: !Ref SimulateMatchFunction
@@ -70,9 +74,8 @@ Resources:
             - Effect: Allow
               Action:
                 - bedrock:InvokeModel
-              Resource:
-                - "arn:aws:bedrock:*::foundation-model/amazon.nova-lite-v1:0"
-                - "arn:aws:bedrock:us-east-1:*:inference-profile/us.amazon.nova-lite-v1:0"
+                - bedrock:ApplyGuardrail
+              Resource: "*"
 
   TeamsTable:
     Type: AWS::DynamoDB::Table
