@@ -23,9 +23,3 @@ frontend/.vite/
 .idea/
 .vscode/
 .DS_Store
-
-# json output
-response.json
-resp.json
-r.json
-out.json
